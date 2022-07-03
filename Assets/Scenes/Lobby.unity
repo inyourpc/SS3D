@@ -489,12 +489,60 @@ MonoBehaviour:
   _scenePathHash: 952082934
   _sceneId: 4089165067830856234
   _sceneNetworkObjects:
+  - {fileID: 1506918116}
   - {fileID: 246961641}
   - {fileID: 616353825}
   - {fileID: 1081000820}
   - {fileID: 1747971347}
   - {fileID: 2038082477}
   - {fileID: 2057128681}
+--- !u!1 &329877413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 329877415}
+  - component: {fileID: 329877414}
+  m_Layer: 0
+  m_Name: ChatSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 2800000, guid: ed69f9358ad659141967603355f13322, type: 3}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &329877414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329877413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26860bc7ac4a47841b605d71a8755897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 3
+  _addedNetworkObject: {fileID: 1506918116}
+  _networkObjectCache: {fileID: 1506918116}
+--- !u!4 &329877415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329877413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1506918115}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &474682041
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,9 +632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d16b1471984416d89a09ebc9e45af88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 0
+  _componentIndexCache: 1
   _addedNetworkObject: {fileID: 616353825}
-  _networkObjectCache: {fileID: 616353825}
+  _networkObjectCache: {fileID: 1506918116}
   _soulPrefab: {fileID: 8103066686919155798, guid: 59f05e8a3a1d4b94eb5222aed605e260, type: 3}
 --- !u!114 &616353825
 MonoBehaviour:
@@ -607,12 +655,13 @@ MonoBehaviour:
     Rotation: {x: -0, y: -0, z: -0, w: 1}
     LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
-  _hasParentNetworkObjectAtEdit: 0
+  _hasParentNetworkObjectAtEdit: 1
   NetworkObserver: {fileID: 0}
   _prefabId: -1
   _scenePathHash: 952082934
   _sceneId: 4089165068398884832
   _sceneNetworkObjects:
+  - {fileID: 1506918116}
   - {fileID: 246961641}
   - {fileID: 616353825}
   - {fileID: 1081000820}
@@ -769,9 +818,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1892bb003da8aaf41a44fb7f08e7e9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 1
+  _componentIndexCache: 0
   _addedNetworkObject: {fileID: 1747971347}
-  _networkObjectCache: {fileID: 1747971347}
+  _networkObjectCache: {fileID: 1081000820}
   _embarkButton: {fileID: 1113205650761546343}
 --- !u!114 &1081000820
 MonoBehaviour:
@@ -792,12 +841,13 @@ MonoBehaviour:
     Rotation: {x: -0, y: -0, z: -0, w: 1}
     LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
-  _hasParentNetworkObjectAtEdit: 1
+  _hasParentNetworkObjectAtEdit: 0
   NetworkObserver: {fileID: 0}
   _prefabId: -1
   _scenePathHash: 952082934
   _sceneId: 4089165068380223416
   _sceneNetworkObjects:
+  - {fileID: 1506918116}
   - {fileID: 246961641}
   - {fileID: 616353825}
   - {fileID: 1081000820}
@@ -835,6 +885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1506918115}
+  - component: {fileID: 1506918116}
   m_Layer: 0
   m_Name: Lobby Managers
   m_TagString: Untagged
@@ -858,9 +909,45 @@ Transform:
   - {fileID: 616353823}
   - {fileID: 246961639}
   - {fileID: 474682043}
+  - {fileID: 329877415}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1506918116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506918114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _networkBehaviours:
+  - {fileID: 2057128680}
+  - {fileID: 616353824}
+  - {fileID: 246961640}
+  - {fileID: 329877414}
+  SceneTransformProperties:
+    Position: {x: 698.9584, y: 414.30542, z: -44.10029}
+    Rotation: {x: 0, y: 0, z: 0, w: 1}
+    LocalScale: {x: 1, y: 1, z: 1}
+  _isNetworked: 1
+  _hasParentNetworkObjectAtEdit: 0
+  NetworkObserver: {fileID: 0}
+  _prefabId: -1
+  _scenePathHash: 952082934
+  _sceneId: 4089165067779404575
+  _sceneNetworkObjects:
+  - {fileID: 1506918116}
+  - {fileID: 246961641}
+  - {fileID: 616353825}
+  - {fileID: 1081000820}
+  - {fileID: 1747971347}
+  - {fileID: 2038082477}
+  - {fileID: 2057128681}
 --- !u!1 &1747971345
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,6 +1011,7 @@ MonoBehaviour:
   _scenePathHash: 952082934
   _sceneId: 4089165064660402669
   _sceneNetworkObjects:
+  - {fileID: 1506918116}
   - {fileID: 246961641}
   - {fileID: 616353825}
   - {fileID: 1081000820}
@@ -1177,9 +1265,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988dec00c80c53945b5516f8d81ee0f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 2
+  _componentIndexCache: 0
   _addedNetworkObject: {fileID: 1747971347}
-  _networkObjectCache: {fileID: 1747971347}
+  _networkObjectCache: {fileID: 2038082477}
   _roundCountdownText: {fileID: 2004361237}
 --- !u!114 &2038082477
 MonoBehaviour:
@@ -1200,12 +1288,13 @@ MonoBehaviour:
     Rotation: {x: -0, y: -0, z: -0, w: 1}
     LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
-  _hasParentNetworkObjectAtEdit: 1
+  _hasParentNetworkObjectAtEdit: 0
   NetworkObserver: {fileID: 0}
   _prefabId: -1
   _scenePathHash: 952082934
   _sceneId: 4089165065227811653
   _sceneNetworkObjects:
+  - {fileID: 1506918116}
   - {fileID: 246961641}
   - {fileID: 616353825}
   - {fileID: 1081000820}
@@ -1285,6 +1374,7 @@ MonoBehaviour:
   _scenePathHash: 952082934
   _sceneId: 4089165067560879974
   _sceneNetworkObjects:
+  - {fileID: 1506918116}
   - {fileID: 246961641}
   - {fileID: 616353825}
   - {fileID: 1081000820}
@@ -1442,7 +1532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 622277640, guid: d0d3fca97d97f283d89aac442f2e50c7, type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1364950579, guid: d0d3fca97d97f283d89aac442f2e50c7, type: 3}
       propertyPath: m_AnchorMax.y
