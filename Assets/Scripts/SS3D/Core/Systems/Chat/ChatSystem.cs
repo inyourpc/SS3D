@@ -4,6 +4,7 @@ using FishNet.Connection;
 using FishNet.Managing.Server;
 using FishNet.Object;
 using SS3D.Core.Systems.Chat.Messages;
+using UnityEngine;
 
 namespace SS3D.Core.Systems.Chat
 {
@@ -44,7 +45,8 @@ namespace SS3D.Core.Systems.Chat
 
             // TODO: Any necessary message checks
 
-            _serverManager.Broadcast(new SendChatMessage(message));
+            Debug.Log($"[{nameof(ChatSystem)}] - Sending message to clients: {message.FullMessage}");
+            _serverManager.Broadcast(new ChatMessageReceived(message));
         }
     }
 }

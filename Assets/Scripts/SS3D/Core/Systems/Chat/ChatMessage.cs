@@ -5,14 +5,23 @@ namespace SS3D.Core.Systems.Chat
     public struct ChatMessage
     {
         public readonly ChatChannels Channel;
-        public readonly NetworkConnection Author;
-        public readonly string Message;
+        public readonly NetworkConnection Sender;
+        public readonly string Author;
+        public readonly string Content;
 
-        public ChatMessage(ChatChannels channel, NetworkConnection author, string message)
+        public string FullMessage => ToString();
+
+        public ChatMessage(ChatChannels channel, NetworkConnection sender, string author, string content)
         {
             Channel = channel;
+            Sender = sender;
             Author = author;
-            Message = message;
+            Content = content;
+        }
+
+        public override string ToString()
+        {
+            return $"[<b>{Author}</b>] | {Content}";
         }
     }
 }

@@ -2,11 +2,11 @@
 
 namespace SS3D.Core.Systems.Chat.Messages
 {
-    public struct SendChatMessage : IBroadcast
+    public struct ChatMessageReceived : IBroadcast
     {
         public readonly ChatMessage Message;
 
-        public SendChatMessage(ChatMessage message)
+        public ChatMessageReceived(ChatMessage message)
         {
             Message = message;
         }
