@@ -9,7 +9,19 @@ using UnityEngine;
 namespace SS3D.Core.Systems.Chat
 {
     /// <summary>
+    /// <para>
     /// Controls the chat system, processing messages that come from clients and sending to all clients.
+    /// </para>
+    ///
+    /// <para>
+    /// How it works:
+    /// <ul>
+    ///     <li>1 - Player sends a chat message request</li>
+    ///     <li>2 - Server receives it</li>
+    ///     <li>3 - Server processes it</li>
+    ///     <li>4 - Server sends to all clients</li>
+    /// </ul>
+    /// </para>
     /// </summary>
     public class ChatSystem : NetworkBehaviour
     {
