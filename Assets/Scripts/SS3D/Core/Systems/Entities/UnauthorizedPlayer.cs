@@ -18,6 +18,7 @@ namespace SS3D.Core.Systems.Entities
             Setup();
         }
 
+        [Client]
         private void Setup()
         {
             string ckey = LocalPlayerAccountUtility.Ckey;
@@ -28,10 +29,10 @@ namespace SS3D.Core.Systems.Entities
                 return;
             }
 
-            CmdRemoveConnectionAfterLogin();
-            UserAuthorizationMessage userAuthorizationMessage = new UserAuthorizationMessage(ckey);
+            UserAuthorizationMessage userAuthorizationMessage = new(ckey);
             InstanceFinder.ClientManager.Broadcast(userAuthorizationMessage);
 
+            CmdRemoveConnectionAfterLogin();
             CmdDestroyObjectAfterLogin();
         }
 
@@ -44,10 +45,6 @@ namespace SS3D.Core.Systems.Entities
         [ServerRpc(RequireOwnership = false)]
         private void CmdRemoveConnectionAfterLogin()
         {
-            string ckey = LocalPlayerAccountUtility.Ckey;
-    
-            Debug.Log($"[{nameof(UnauthorizedPlayer)}] - OnStartLocalPlayer - Destroying temporary player for {ckey}");
-            
             NetworkObject.RemoveOwnership();
         }
     }
